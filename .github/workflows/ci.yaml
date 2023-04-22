@@ -17,8 +17,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{matrix.node-version}}
-      - run: npm i
-      - run: npm run test -coverprofile=coverage.out
+      - name: Install dependencies
+        run: npm i
+      - name: Test and Coverage
+        run: npm run test --coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
