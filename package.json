@@ -7,6 +7,9 @@
     "start": "node src/index.js",
     "test": "jest"
   },
+  "jest": {
+    "collectCoverage": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/victorhugoaraujo/fullcycle-ci-sonarcloud.git"
